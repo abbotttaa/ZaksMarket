@@ -1,0 +1,152 @@
+﻿@model ZaksMarketplace.Models.EoDDryStockModels
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>EoDDryStockModels</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DietCoke)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DietCoke)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Coke)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Coke)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sprite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sprite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChewyBar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChewyBar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Water)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Water)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CupSleeve)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CupSleeve)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CupPack)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CupPack)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CupLid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CupLid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sugar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sugar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SugarInTheRaw)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SugarInTheRaw)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Creamer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Creamer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Napkins)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Napkins)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StirSicks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StirSicks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chips)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chips)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CoffeeFilter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoffeeFilter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Candy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Candy)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

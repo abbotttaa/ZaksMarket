@@ -1,0 +1,123 @@
+﻿@model IEnumerable<ZaksMarketplace.Models.EoDDryStockModels>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DietCoke)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Coke)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sprite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChewyBar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Water)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CupSleeve)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CupPack)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CupLid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sugar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SugarInTheRaw)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Creamer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Napkins)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StirSicks)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Chips)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CoffeeFilter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Candy)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DietCoke)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Coke)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sprite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChewyBar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Water)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CupSleeve)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CupPack)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CupLid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sugar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SugarInTheRaw)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Creamer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Napkins)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StirSicks)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Chips)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CoffeeFilter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Candy)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Date }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Date }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Date })
+        </td>
+    </tr>
+}
+
+</table>

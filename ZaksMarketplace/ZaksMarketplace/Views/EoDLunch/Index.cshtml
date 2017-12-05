@@ -1,0 +1,129 @@
+﻿@model IEnumerable<ZaksMarketplace.Models.EoDLunchModels>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ChefSalad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CranSalad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CaeserSalad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RanchDressingCup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BalsamicDressingCup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tuna)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChickenSaladSam)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ColdItalian)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BuffaloRanch)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BuffaloBleu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TurkeyClub)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BLTCClub)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PortabelloWrap)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GrilledCheese)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TurkeyApple)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HamCheese)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BLTCWrap)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChefSalad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CranSalad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CaeserSalad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RanchDressingCup)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BalsamicDressingCup)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tuna)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChickenSaladSam)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ColdItalian)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuffaloRanch)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuffaloBleu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TurkeyClub)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BLTCClub)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PortabelloWrap)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GrilledCheese)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TurkeyApple)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HamCheese)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BLTCWrap)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Date }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Date }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Date })
+        </td>
+    </tr>
+}
+
+</table>
