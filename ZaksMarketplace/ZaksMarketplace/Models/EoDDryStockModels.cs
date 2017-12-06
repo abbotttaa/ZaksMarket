@@ -9,7 +9,10 @@ namespace ZaksMarketplace.Models
     public class EoDDryStockModels
     {
         [Key]
-        public int Date { get; set; }
+        public int Id { get; set; }
+        public int Year { get; set; }
+        public int Month { get; set; }
+        public int Day { get; set; }
         public int DietCoke { get; set; }
         public int Coke { get; set; }
         public int Sprite { get; set; }

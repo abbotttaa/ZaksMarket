@@ -9,7 +9,10 @@ namespace ZaksMarketplace.Models
     public class EoDLunchModels
     {
         [Key]
-        public int Date { get; set; }
+        public int Id { get; set; }
+        public int Year { get; set; }
+        public int Month { get; set; }
+        public int Day { get; set; }
         public int ChefSalad { get; set; }
         public int CranSalad { get; set; }
         public int CaeserSalad { get; set; }
