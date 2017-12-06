@@ -33,5 +33,7 @@ namespace ZaksMarketplace.Models
         public System.Data.Entity.DbSet<ZaksMarketplace.Models.EoDDryStockModels> EoDDryStockModels { get; set; }
 
         public System.Data.Entity.DbSet<ZaksMarketplace.Models.EoDLunchModels> EoDLunchModels { get; set; }
+
+        public System.Data.Entity.DbSet<ZaksMarketplace.Models.CoffeeModels> CoffeeModels { get; set; }
     }
 }

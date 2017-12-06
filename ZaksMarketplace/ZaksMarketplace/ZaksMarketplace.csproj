@@ -168,16 +168,22 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CoffeeController.cs" />
     <Compile Include="Controllers\EoDDryStockController.cs" />
     <Compile Include="Controllers\EoDLunchController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201712061515225_NewDBNewKeys.cs" />
     <Compile Include="Migrations\201712061515225_NewDBNewKeys.Designer.cs">
       <DependentUpon>201712061515225_NewDBNewKeys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712061754381_AddedGenericAdminAndEmployee.cs" />
+    <Compile Include="Migrations\201712061754381_AddedGenericAdminAndEmployee.Designer.cs">
+      <DependentUpon>201712061754381_AddedGenericAdminAndEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -255,9 +261,15 @@
     <Content Include="Views\EoDLunch\Details.cshtml" />
     <Content Include="Views\EoDLunch\Edit.cshtml" />
     <Content Include="Views\EoDLunch\Index.cshtml" />
+    <Content Include="Views\Coffee\Create.cshtml" />
+    <Content Include="Views\Coffee\Delete.cshtml" />
+    <Content Include="Views\Coffee\Details.cshtml" />
+    <Content Include="Views\Coffee\Edit.cshtml" />
+    <Content Include="Views\Coffee\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Role\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -270,6 +282,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201712061515225_NewDBNewKeys.resx">
       <DependentUpon>201712061515225_NewDBNewKeys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712061754381_AddedGenericAdminAndEmployee.resx">
+      <DependentUpon>201712061754381_AddedGenericAdminAndEmployee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
