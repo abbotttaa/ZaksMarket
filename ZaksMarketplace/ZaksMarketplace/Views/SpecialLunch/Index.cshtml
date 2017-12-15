@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ZaksMarketplace.Models.SpeacialLunchModels>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Featured Lunches</h2>
+
+
+<table class="table-success">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FeaturedChoice)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Cost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOffered)
+        </th>
+        <th></th>
+    </tr>
+</table>
+
+@foreach (var item in Model) {
+    <table class="table-light">
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FeaturedChoice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOffered)
+        </td>
+        
+    </tr>
+    </table>
+}
+<p><a class="btn btn-success" href="@Url.Action("Index","SpecialLunch")">Sign up for the next event! &raquo;</a></p>
+

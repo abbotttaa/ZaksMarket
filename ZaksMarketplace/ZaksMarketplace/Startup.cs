@@ -60,7 +60,7 @@ namespace ZaksMarketplace
 
                 var user = new ApplicationUser();
                 user.UserName = "Taydiz";
-                user.Email = "Zaks@gmail.com";
+                user.Email = "Bingus@gmail.com";
 
                 string userPWD = "Abc123!";
 

@@ -12,8 +12,10 @@ namespace ZaksMarketplace.Models
         [Key]
         public int JunctId { get; set; }
 
-        [ForeignKey("OrderNumber")]
-        public virtual CateringInvoiceModels Id { get; set; }
+        public int InvoiceId { get; set; }
+
+        [ForeignKey("InvoiceId")]
+        public virtual CateringInvoiceModels Invoices { get; set; }
 
         public int CustomCaterOrderNumber { get; set; }
 

@@ -30,10 +30,18 @@ namespace ZaksMarketplace.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<ZaksMarketplace.Models.EoDDryStockModels> EoDDryStockModels { get; set; }
+        public DbSet<EoDDryStockModels> EoDDryStockModels { get; set; }
 
-        public System.Data.Entity.DbSet<ZaksMarketplace.Models.EoDLunchModels> EoDLunchModels { get; set; }
+        public DbSet<EoDLunchModels> EoDLunchModels { get; set; }
 
-        public System.Data.Entity.DbSet<ZaksMarketplace.Models.CoffeeModels> CoffeeModels { get; set; }
+        public DbSet<CoffeeModels> CoffeeModels { get; set; }
+
+        public DbSet<CateringInvoiceModels> Invoices { get; set; }
+
+        public DbSet<CateringMenuModels> Menus { get; set; }
+
+        public DbSet<EoDLunchOrderModels> Lunch { get; set; }
+
+        public DbSet<SpeacialLunchModels> Speacial { get; set; }
     }
 }

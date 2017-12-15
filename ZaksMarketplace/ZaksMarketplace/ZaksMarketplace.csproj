@@ -49,8 +49,21 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.1.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.1.0\lib\net452\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Stripe.net, Version=11.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stripe.net.11.9.0\lib\net45\Stripe.net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -112,9 +125,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -168,37 +178,62 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminAnalyticsController.cs" />
+    <Compile Include="Controllers\CateringInvoiceController.cs" />
+    <Compile Include="Controllers\CateringMenuController.cs" />
     <Compile Include="Controllers\CoffeeController.cs" />
+    <Compile Include="Controllers\EmployeeToolsController.cs" />
     <Compile Include="Controllers\EoDDryStockController.cs" />
     <Compile Include="Controllers\EoDLunchController.cs" />
+    <Compile Include="Controllers\EoDLunchOrderController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\SpecialLunchController.cs" />
+    <Compile Include="Controllers\StripeAPIController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712061515225_NewDBNewKeys.cs" />
-    <Compile Include="Migrations\201712061515225_NewDBNewKeys.Designer.cs">
-      <DependentUpon>201712061515225_NewDBNewKeys.cs</DependentUpon>
+    <Compile Include="Migrations\201712111932150_TestAgain.cs" />
+    <Compile Include="Migrations\201712111932150_TestAgain.Designer.cs">
+      <DependentUpon>201712111932150_TestAgain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712061754381_AddedGenericAdminAndEmployee.cs" />
-    <Compile Include="Migrations\201712061754381_AddedGenericAdminAndEmployee.Designer.cs">
-      <DependentUpon>201712061754381_AddedGenericAdminAndEmployee.cs</DependentUpon>
+    <Compile Include="Migrations\201712121659075_EoDLunchOrderAdded.cs" />
+    <Compile Include="Migrations\201712121659075_EoDLunchOrderAdded.Designer.cs">
+      <DependentUpon>201712121659075_EoDLunchOrderAdded.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712071953072_CateringModelsAdded.cs" />
-    <Compile Include="Migrations\201712071953072_CateringModelsAdded.Designer.cs">
-      <DependentUpon>201712071953072_CateringModelsAdded.cs</DependentUpon>
+    <Compile Include="Migrations\201712121928129_ToolsStarted.cs" />
+    <Compile Include="Migrations\201712121928129_ToolsStarted.Designer.cs">
+      <DependentUpon>201712121928129_ToolsStarted.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712080020417_ViewModelAdded.cs" />
-    <Compile Include="Migrations\201712080020417_ViewModelAdded.Designer.cs">
-      <DependentUpon>201712080020417_ViewModelAdded.cs</DependentUpon>
+    <Compile Include="Migrations\201712131642306_WeatherMyDude.cs" />
+    <Compile Include="Migrations\201712131642306_WeatherMyDude.Designer.cs">
+      <DependentUpon>201712131642306_WeatherMyDude.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712141609489_SPecialLunches.cs" />
+    <Compile Include="Migrations\201712141609489_SPecialLunches.Designer.cs">
+      <DependentUpon>201712141609489_SPecialLunches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712141632555_FixedIdentity.cs" />
+    <Compile Include="Migrations\201712141632555_FixedIdentity.Designer.cs">
+      <DependentUpon>201712141632555_FixedIdentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712142019094_SeedingDataMaybe.cs" />
+    <Compile Include="Migrations\201712142019094_SeedingDataMaybe.Designer.cs">
+      <DependentUpon>201712142019094_SeedingDataMaybe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712142155520_DayOfWeekAdded.cs" />
+    <Compile Include="Migrations\201712142155520_DayOfWeekAdded.Designer.cs">
+      <DependentUpon>201712142155520_DayOfWeekAdded.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ApiStorage.cs" />
     <Compile Include="Models\CateringInvoiceModels.cs" />
     <Compile Include="Models\CateringJuctModels.cs" />
     <Compile Include="Models\CateringMenuModels.cs" />
-    <Compile Include="ViewModel\CateringViewModels.cs" />
+    <Compile Include="Models\EoDLunchOrderModels.cs" />
+    <Compile Include="Models\SpeacialLunchModels.cs" />
     <Compile Include="Models\CoffeeModels.cs" />
     <Compile Include="Models\EoDDryStockModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -206,6 +241,7 @@
     <Compile Include="Models\EoDLucnhModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="WeatherAPI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-lux.css" />
@@ -278,10 +314,30 @@
     <Content Include="Views\Coffee\Details.cshtml" />
     <Content Include="Views\Coffee\Edit.cshtml" />
     <Content Include="Views\Coffee\Index.cshtml" />
+    <Content Include="Views\CateringInvoice\StartTicket.cshtml" />
+    <Content Include="Views\CateringInvoice\Create.cshtml" />
+    <Content Include="Views\Home\ConfirmCater.cshtml" />
+    <Content Include="Views\CateringMenu\Create.cshtml" />
+    <Content Include="Views\CateringMenu\Delete.cshtml" />
+    <Content Include="Views\CateringMenu\Details.cshtml" />
+    <Content Include="Views\CateringMenu\Edit.cshtml" />
+    <Content Include="Views\CateringMenu\Index.cshtml" />
+    <Content Include="Views\CateringMenu\AddToCateringOrder.cshtml" />
+    <Content Include="Views\Home\EmployeeTools.cshtml" />
+    <Content Include="Views\EoDLunchOrder\Create.cshtml" />
+    <Content Include="Views\Coffee\Stripe.cshtml" />
+    <Content Include="Views\SpecialLunch\Index.cshtml" />
+    <Content Include="Views\SpecialLunch\MakeSpecial.cshtml" />
+    <Content Include="Views\SpecialLunch\SignUp.cshtml" />
+    <Content Include="Views\AdminAnalytics\Index.cshtml" />
+    <Content Include="Views\AdminAnalytics\Calc.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ViewModel\" />
+    <Folder Include="Views\EmployeeTools\" />
     <Folder Include="Views\Role\" />
+    <Folder Include="Views\StripeAPI\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -292,17 +348,29 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712061515225_NewDBNewKeys.resx">
-      <DependentUpon>201712061515225_NewDBNewKeys.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712111932150_TestAgain.resx">
+      <DependentUpon>201712111932150_TestAgain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712061754381_AddedGenericAdminAndEmployee.resx">
-      <DependentUpon>201712061754381_AddedGenericAdminAndEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712121659075_EoDLunchOrderAdded.resx">
+      <DependentUpon>201712121659075_EoDLunchOrderAdded.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712071953072_CateringModelsAdded.resx">
-      <DependentUpon>201712071953072_CateringModelsAdded.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712121928129_ToolsStarted.resx">
+      <DependentUpon>201712121928129_ToolsStarted.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712080020417_ViewModelAdded.resx">
-      <DependentUpon>201712080020417_ViewModelAdded.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712131642306_WeatherMyDude.resx">
+      <DependentUpon>201712131642306_WeatherMyDude.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712141609489_SPecialLunches.resx">
+      <DependentUpon>201712141609489_SPecialLunches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712141632555_FixedIdentity.resx">
+      <DependentUpon>201712141632555_FixedIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712142019094_SeedingDataMaybe.resx">
+      <DependentUpon>201712142019094_SeedingDataMaybe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712142155520_DayOfWeekAdded.resx">
+      <DependentUpon>201712142155520_DayOfWeekAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

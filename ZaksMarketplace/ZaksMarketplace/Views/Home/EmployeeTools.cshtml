@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "EmployeeTools";
+}
+
+<h2>Employee Tools</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Coffee Tracker</h2>
+        <p>
+            Record the amount of coffee and espresso you poured today. This should be done after close, to make sure you charge an accurate amount.
+        </p>
+        <p><a class="btn btn-info" href="..\Coffee\Create">Log coffee/espresso use &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>EoD Lunch</h2>
+        <p>Record pre made lunches left at the end of the day</p>
+        <p><a class="btn btn-info" href="..\EoDLunch\Create">Record waste &raquo;</a></p>
+    </div>
+        <div class="col-md-4">
+            <h2>EoD DryStock</h2>
+            <p>
+                Record dry stock count, and fill up to par.
+            </p>
+            <p><a class="btn btn-info" href="..\EoDDryStock\Create">List drystock&raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Lunch For Tomorrow</h2>
+            <p>Use analytics to make a order for tomorrows pre made lunches.</p>
+            <p><a class="btn btn-info" href="@Url.Action("Create","EoDLunchOrder")">Start order &raquo;</a></p>
+        </div>
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="col-md-4">
+            <h2>Manage specialty lunches</h2>
+            <p>Add a special option to be offered for a specific day.</p>
+            <p><a class="btn btn-info" href="@Url.Action("MakeSpecial","SpecialLunch")">Make Changes &raquo;</a></p>
+        </div>
+
+        <div class="col-md-4">
+            <h2>View Analytics</h2>
+            <p>Filter data in easy to observe context.</p>
+            <p><a class="btn btn-info" href="http://go.microsoft.com/fwlink/?LinkId=301866">View Data &raquo;</a></p>
+        </div>
+
+    }
+
+

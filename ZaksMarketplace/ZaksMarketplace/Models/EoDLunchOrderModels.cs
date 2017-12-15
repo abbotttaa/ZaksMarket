@@ -6,13 +6,14 @@ using System.Web;
 
 namespace ZaksMarketplace.Models
 {
-    public class EoDLunchModels
+    public class EoDLunchOrderModels
     {
         [Key]
         public int Id { get; set; }
+
+        public string TomorrowsWeather { get; set; }
         public string Date { get; set; }
-        public string DaysWeather { get; set; }
-        [Display(Name = "Chef Salad")]
+        [Display(Name = "CHef Salad")]
         public int ChefSalad { get; set; }
         [Display(Name = "Cran Salad")]
         public int CranSalad { get; set; }
@@ -48,7 +49,5 @@ namespace ZaksMarketplace.Models
         public int BLTCWrap { get; set; }
 
         public int DayOfWeek { get; set; }
-
-
     }
 }

@@ -51,8 +51,9 @@ namespace ZaksMarketplace.Controllers
             if (ModelState.IsValid)
             {
                 db.EoDDryStockModels.Add(eoDDryStockModels);
+                eoDDryStockModels.Date = DateTime.Now.ToString("dd/MM/yyyy");
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("EmployeeTools", "Home");
             }
 
             return View(eoDDryStockModels);

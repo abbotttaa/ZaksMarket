@@ -10,11 +10,14 @@ namespace ZaksMarketplace.Models
     {
         [Key]
         public int Id { get; set; }
-        public int Year { get; set; }
-        public int Month { get; set; }
-        public int Day { get; set; }
+        public string Date { get; set; }
+        [Display(Name = "Regular Coffee")]
         public int RegularCoffee { get; set; }
+        [Display(Name = "Decaf Coffee")]
         public int DecafCoffee { get; set; }
+        [Display(Name = "Latte")]
         public int Latte { get; set; }
+
+        public int DayOfWeek { get; set; }
     }
 }

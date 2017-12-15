@@ -1,0 +1,142 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Admin Analytics</h2>
+
+<p>dank</p>
+
+<body>Days where</body>
+<select>
+    <option value=""></option>
+    <option value="ChefSalad">Chef Salad</option>
+    <option value="CranSalad">Cran Salad</option>
+    <option value="CaeserSalad">Caeser Salad</option>
+    <option value="RanchDressingCup">Ranch Dressing</option>
+    <option value="BalsamicDressingCup">Balsamic Dressing</option>
+    <option value="Tuna">Tuna</option>
+    <option value="ChickenSaladSam">Chicken Salad</option>
+    <option value="ColdItalian">Cold Italian</option>
+    <option value="BuffaloRanch">Buffalo Ranch</option>
+    <option value="BuffaloBleu">Buffalo Bleu</option>
+    <option value="TurkeyClub">Turkey Club</option>
+    <option value="BLTCClub">BLTC Club</option>
+    <option value="PortabelloWrap">Portabello Wrap</option>
+    <option value="GrilledCheese">GrilledCheese</option>
+    <option value="TurkeyApple">Turkey Apple</option>
+    <option value="HamCheese">Ham and Cheese</option>
+    <option value="BLTCWrap">BLTC Wrap</option>
+</select>
+<body>Have a waste count greater than</body>
+<select>
+    <option value=""></option>
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+<body>:</body>
+<body>@Html.ViewBag.Banana</body>
+
+<br />
+<hr />
+<p><a class="btn btn-success" href="@Url.Action("Calc","AdminAnalytics")">Evaluate Waste &raquo;</a></p>
+<hr />
+
+<body>Average waste of</body>
+<select>
+    <option value=""></option>
+    <option value="ChefSalad">Chef Salad</option>
+    <option value="CranSalad">Cran Salad</option>
+    <option value="CaeserSalad">Caeser Salad</option>
+    <option value="RanchDressingCup">Ranch Dressing</option>
+    <option value="BalsamicDressingCup">Balsamic Dressing</option>
+    <option value="Tuna">Tuna</option>
+    <option value="ChickenSaladSam">Chicken Salad</option>
+    <option value="ColdItalian">Cold Italian</option>
+    <option value="BuffaloRanch">Buffalo Ranch</option>
+    <option value="BuffaloBleu">Buffalo Bleu</option>
+    <option value="TurkeyClub">Turkey Club</option>
+    <option value="BLTCClub">BLTC Club</option>
+    <option value="PortabelloWrap">Portabello Wrap</option>
+    <option value="GrilledCheese">GrilledCheese</option>
+    <option value="TurkeyApple">Turkey Apple</option>
+    <option value="HamCheese">Ham and Cheese</option>
+    <option value="BLTCWrap">BLTC Wrap</option>
+</select>
+<body>When the weather is classified as</body>
+
+<select>
+    <option value=""></option>
+    <option value="ThunderStorm">Thunder Storm</option>
+    <option value="Drizzle">Drizzle</option>
+    <option value="Rain">Rain</option>
+    <option value="Snow">Snow</option>
+    <option value="Clear">Clear</option>
+    <option value="Extreme">Extreme</option>
+</select>
+
+<body>:</body>
+
+<body>
+    @Html.ViewBag.weatherwaste
+</body>
+<hr />
+<p><a class="btn btn-success" href="@Url.Action("Calc","AdminAnalytics")">Evaluate Waste &raquo;</a></p>
+
+<hr />
+
+<body>On</body>
+
+<select>
+    <option value=""></option>
+    <option value="Monday">Monday</option>
+    <option value="Tuesday">Tuesday</option>
+    <option value="Wednesday">Wednesday</option>
+    <option value="Thursday">Thursday</option>
+    <option value="Friday">Friday</option>
+    <option value="Saturday">Saturday</option>
+    <option value="Sunday">Sunday</option>
+</select>
+
+<body>We waste</body>
+
+<select>
+    <option value=""></option>
+    <option value="ChefSalad">Chef Salad</option>
+    <option value="CranSalad">Cran Salad</option>
+    <option value="CaeserSalad">Caeser Salad</option>
+    <option value="RanchDressingCup">Ranch Dressing</option>
+    <option value="BalsamicDressingCup">Balsamic Dressing</option>
+    <option value="Tuna">Tuna</option>
+    <option value="ChickenSaladSam">Chicken Salad</option>
+    <option value="ColdItalian">Cold Italian</option>
+    <option value="BuffaloRanch">Buffalo Ranch</option>
+    <option value="BuffaloBleu">Buffalo Bleu</option>
+    <option value="TurkeyClub">Turkey Club</option>
+    <option value="BLTCClub">BLTC Club</option>
+    <option value="PortabelloWrap">Portabello Wrap</option>
+    <option value="GrilledCheese">GrilledCheese</option>
+    <option value="TurkeyApple">Turkey Apple</option>
+    <option value="HamCheese">Ham and Cheese</option>
+    <option value="BLTCWrap">BLTC Wrap</option>
+</select>
+
+<body>on average:</body>
+
+<body>
+    @Html.ViewBag.DayWaste
+</body>
+
+<hr />
+
+<p><a class="btn btn-success" href="@Url.Action("Index","AdminAnalytics")">Evaluate Waste &raquo;</a></p>
+
+
+
+
+
+

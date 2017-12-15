@@ -7,13 +7,13 @@ namespace ZaksMarketplace.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class NewDBNewKeys : IMigrationMetadata
+    public sealed partial class EoDLunchOrderAdded : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(NewDBNewKeys));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(EoDLunchOrderAdded));
         
         string IMigrationMetadata.Id
         {
-            get { return "201712061515225_NewDBNewKeys"; }
+            get { return "201712121659075_EoDLunchOrderAdded"; }
         }
         
         string IMigrationMetadata.Source

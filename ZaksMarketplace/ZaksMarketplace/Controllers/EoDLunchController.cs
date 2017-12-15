@@ -13,6 +13,7 @@ namespace ZaksMarketplace.Controllers
     public class EoDLunchController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        
 
         // GET: EoDLunch
         public ActionResult Index()
@@ -50,9 +51,14 @@ namespace ZaksMarketplace.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 db.EoDLunchModels.Add(eoDLunchModels);
+                DateTime Clock = DateTime.Now;
+                eoDLunchModels.DayOfWeek = (int)Clock.DayOfWeek;
+                eoDLunchModels.DaysWeather = WeatherAPI.CallAPICurrentWeather();
+                eoDLunchModels.Date = DateTime.Now.ToString("dd/MM/yyyy");
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("EmployeeTools", "Home");
             }
 
             return View(eoDLunchModels);

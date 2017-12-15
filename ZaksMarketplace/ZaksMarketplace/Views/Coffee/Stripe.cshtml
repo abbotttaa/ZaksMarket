@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Stripe";
+}
+
+<h2>Charge sponcer for coffee</h2>
+
+<form action="/Payment/Charge" method="POST">
+    <article>
+        <label>Amount: $39.38</label>
+    </article>
+    <script src="//checkout.stripe.com/v2/checkout.js"
+            class="stripe-button"
+            data-key="@ViewBag.StripePublishKey"
+            data-locale="auto"
+            data-description="Sample Charge"
+            data-amount="3938">
+    </script>
+</form>
+

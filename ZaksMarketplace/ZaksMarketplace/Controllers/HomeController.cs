@@ -26,5 +26,13 @@ namespace ZaksMarketplace.Controllers
 
             return View();
         }
+        public ActionResult ConfirmCater()
+        {
+            return View();
+        }
+        public ActionResult EmployeeTools()
+        {
+            return View();
+        }
     }
 }

@@ -3,7 +3,7 @@ namespace ZaksMarketplace.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class CateringModelsAdded : DbMigration
+    public partial class FixedIdentity : DbMigration
     {
         public override void Up()
         {

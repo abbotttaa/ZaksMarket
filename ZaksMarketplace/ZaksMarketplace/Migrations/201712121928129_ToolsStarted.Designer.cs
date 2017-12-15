@@ -7,13 +7,13 @@ namespace ZaksMarketplace.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class CateringModelsAdded : IMigrationMetadata
+    public sealed partial class ToolsStarted : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CateringModelsAdded));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ToolsStarted));
         
         string IMigrationMetadata.Id
         {
-            get { return "201712071953072_CateringModelsAdded"; }
+            get { return "201712121928129_ToolsStarted"; }
         }
         
         string IMigrationMetadata.Source

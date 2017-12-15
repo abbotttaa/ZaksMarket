@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Stripe;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
@@ -46,13 +48,16 @@ namespace ZaksMarketplace.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Year,Month,Day,RegularCoffee,DecafCoffee,Latte")] CoffeeModels coffeeModels)
+        public ActionResult Create([Bind(Include = "Id,Date,RegularCoffee,DecafCoffee,Latte")] CoffeeModels coffeeModels)
         {
             if (ModelState.IsValid)
             {
                 db.CoffeeModels.Add(coffeeModels);
+                DateTime Clock = DateTime.Now;
+                coffeeModels.DayOfWeek = (int)Clock.DayOfWeek;
+                coffeeModels.Date = DateTime.Now.ToString("dd/MM/yyyy");
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Stripe", "Coffee");
             }
 
             return View(coffeeModels);
@@ -122,6 +127,35 @@ namespace ZaksMarketplace.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+        public ActionResult Stripe()
+        {
+            var stripePublishKey = ConfigurationManager.AppSettings["pk_test_JyNSZgxjUr924r5R0s6kbLxL"];
+            ViewBag.StripePublishKey = stripePublishKey;
+            return View();
+        }
+        public ActionResult Charge(string stripeEmail, string stripeToken)
+        {
+            var customers = new StripeCustomerService();
+            var charges = new StripeChargeService();
+
+            var customer = customers.Create(new StripeCustomerCreateOptions
+            {
+                Email = stripeEmail,
+                SourceToken = stripeToken
+            });
+
+            var charge = charges.Create(new StripeChargeCreateOptions
+            {
+                Amount = 500,//charge in cents
+                Description = "Sample Charge",
+                Currency = "usd",
+                CustomerId = customer.Id
+            });
+
+            // further application specific code goes here
+
+            return View();
         }
     }
 }
